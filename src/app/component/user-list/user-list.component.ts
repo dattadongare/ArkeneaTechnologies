@@ -37,17 +37,19 @@ export class UserListComponent implements OnInit {
       gender: "Female"
     },
   ];
+  maleCount : number = 0;
+  femaleCount : number = 0;
   constructor(private router: Router) {
 
   }
 
   ngOnInit() {
+    this.getUsersGenderCount();
+    this.showUsersProgressBarData();
     this.dropdownList = [
       { "id": 1, "itemName": "English" },
       { "id": 2, "itemName": "Marathi" },
       { "id": 3, "itemName": "Hindi" },
-
-
     ];
 
     this.dropdownSettings = {
@@ -79,5 +81,18 @@ export class UserListComponent implements OnInit {
   }
   onDeSelectAll(items: any) {
     // console.log(items);
+  }
+  getUsersGenderCount(){
+    this.userList.map((eachUserData)=>{        
+      if(eachUserData.gender == 'Male'){
+        this.maleCount += 1;
+      }else{
+        this.femaleCount += 1;
+      }
+    });
+  }
+  showUsersProgressBarData(){
+    const userListProgressBarDOM = document.getElementById('userListProgressBar');
+    userListProgressBarDOM.style.width = this.userList.length * 10 + '%';
   }
 }
