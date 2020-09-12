@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+// common css
+.validation{
+    color:red;
+}
+.cuppa-dropdown {
+    position: relative;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+.pure-checkbox input[type=checkbox]+label:before{
+    background-color: #ced4da;
+}

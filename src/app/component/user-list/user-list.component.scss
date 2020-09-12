@@ -1,0 +1,32 @@
+thead{
+    background-color: #eee;
+}
+.bg-color{
+    background-color: #eee;
+    padding: 4rem 1rem;
+    min-height:100vh ;
+    p{
+        font-size: 1rem;
+        margin-bottom: 0.2rem;
+        margin-top: 1rem;
+        b{
+            font-size: 1.3rem;
+        }
+    }
+}
+.progress {
+    height: 1.5rem;
+    overflow: hidden;
+    font-size: .75rem;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 4px;
+    margin-bottom: 3rem;
+}
+.progress-bar {
+    background-color: #999;
+}
+input[type=checkbox], input[type=radio] {
+    margin-right: 5px;
+}
+
